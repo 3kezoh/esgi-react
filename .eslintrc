@@ -195,6 +195,15 @@
         "prevent": true
       }
     ],
+    "react/jsx-handler-names": [
+      "error",
+      {
+        "eventHandlerPrefix": "handle",
+        "eventHandlerPropPrefix": "on",
+        "checkLocalVariables": true,
+        "checkInlineFunction": true
+      }
+    ],
     "react/jsx-no-bind": [
       "warn",
       {

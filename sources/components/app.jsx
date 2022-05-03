@@ -36,7 +36,7 @@ const App = () => (
   <Container>
     <Navbar />
     <Recipes recipes={recipes} />
-    <Counter />
+    <Counter counter={0} step={0} />
     <Footer />
   </Container>
 );

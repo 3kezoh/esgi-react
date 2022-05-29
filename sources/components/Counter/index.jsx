@@ -3,56 +3,56 @@ import Button from "../Button";
 import PropTypes from "prop-types";
 import styles from "./counter.module.css";
 
-const Counter = ({ counter: initialCounter, step: initialStep }) => {
+function Counter({ counter: initialCounter, step: initialStep }) {
   const [counter, setCounter] = useState(initialCounter);
   const [step, setStep] = useState(initialStep);
 
-  const handleIncrement = () => {
+  function onIncrement() {
     setCounter(counter + step);
-  };
+  }
 
-  const handleDecrement = () => {
+  function onDecrement() {
     setCounter(counter - step);
-  };
+  }
 
-  const handleReset = () => {
+  function onReset() {
     setCounter(initialCounter);
-  };
+  }
 
-  const handleSet = ({ target }) => {
+  function onSet({ target }) {
     const { value } = target;
 
     if (value) {
       setCounter(parseInt(value, 10));
     }
-  };
+  }
 
-  const handleStepChange = ({ target }) => {
+  function onStepChange({ target }) {
     setStep(parseInt(target.value, 10) || 0);
-  };
+  }
 
   return (
     <div className={styles.counter}>
       <input
-        onChange={handleSet}
+        onChange={onSet}
         placeholder="counter"
         type="number"
         value={counter}
       />
-      <Button onClick={handleIncrement}>Increment</Button>
-      <Button onClick={handleDecrement}>Decrement</Button>
-      <Button onClick={handleReset}>Reset</Button>
+      <Button onClick={onIncrement}>Increment</Button>
+      <Button onClick={onDecrement}>Decrement</Button>
+      <Button onClick={onReset}>Reset</Button>
       <label htmlFor="step">Step</label>
       <input
         id="step"
-        onChange={handleStepChange}
+        onChange={onStepChange}
         placeholder="step"
         type="number"
         value={step}
       />
     </div>
   );
-};
+}
 
 Counter.propTypes = {
   counter: PropTypes.number.isRequired,

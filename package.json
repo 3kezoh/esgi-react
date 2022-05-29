@@ -1,9 +1,10 @@
 {
   "private": true,
   "scripts": {
+    "clean": "rm -rf .node_repl_history .npm node_modules package-lock.json",
     "dev": "vite",
     "lint": "eslint .",
-    "clean": "rm -rf .node_repl_history .npm node_modules package-lock.json"
+    "lint:fix": "eslint . --fix"
   },
   "devDependencies": {
     "eslint-plugin-prettier": "^4.0.0",

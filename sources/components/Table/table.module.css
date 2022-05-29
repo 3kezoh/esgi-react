@@ -1,0 +1,12 @@
+.table {
+  border: 1px solid #333333;
+}
+
+.td {
+  border: 1px solid #333333;
+}
+
+.thead {
+  background-color: #333333;
+  color: #ffffff;
+}

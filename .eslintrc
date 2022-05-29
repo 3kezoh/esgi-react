@@ -60,13 +60,6 @@
       }
     ],
     "react/destructuring-assignment": ["error", "always"],
-    "react/function-component-definition": [
-      "error",
-      {
-        "namedComponents": "arrow-function",
-        "unnamedComponents": "arrow-function"
-      }
-    ],
     "react/hook-use-state": ["error"],
     "react/iframe-missing-sandbox": ["error"],
     "react/no-access-state-in-setstate": ["error"],
@@ -198,14 +191,14 @@
     "react/jsx-handler-names": [
       "error",
       {
-        "eventHandlerPrefix": "handle",
+        "eventHandlerPrefix": "on",
         "eventHandlerPropPrefix": "on",
         "checkLocalVariables": true,
         "checkInlineFunction": true
       }
     ],
     "react/jsx-no-bind": [
-      "warn",
+      "off",
       {
         "ignoreDOMComponents": false,
         "ignoreRefs": false,
@@ -309,7 +302,7 @@
     ],
     "no-constructor-return": ["error"],
     "no-control-regex": ["error"],
-    "no-debugger": ["error"],
+    "no-debugger": ["warn"],
     "no-dupe-args": ["error"],
     "no-dupe-class-members": ["error"],
     "no-dupe-else-if": ["error"],
@@ -360,7 +353,7 @@
       }
     ],
     "no-unused-vars": [
-      "error",
+      "warn",
       {
         "args": "after-used",
         "ignoreRestSiblings": false,
@@ -441,7 +434,7 @@
         "generators": "as-needed"
       }
     ],
-    "func-style": ["error", "expression"],
+    "func-style": ["warn", "declaration"],
     "grouped-accessor-pairs": ["error", "getBeforeSet"],
     "guard-for-in": ["error"],
     "init-declarations": ["error", "always"],
@@ -532,7 +525,7 @@
     "no-return-await": ["error"],
     "no-script-url": ["error"],
     "no-sequences": ["error"],
-    "no-shadow": ["error"],
+    "no-shadow": ["off"],
     "no-throw-literal": ["error"],
     "no-undef-init": ["error"],
     "no-undefined": ["error"],

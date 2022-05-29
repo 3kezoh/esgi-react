@@ -1,16 +1,14 @@
 import eslint from "vite-plugin-eslint";
 
 export default {
-  "plugins": [
+  plugins: [
     eslint({
-      "include": [
-        "sources/**/*.jsx",
-        "sources/**/*.js"
-      ]
-    })
+      cache: false,
+      include: ["sources/**/*.jsx", "sources/**/*.js"],
+    }),
   ],
-  "server": {
-    "port": 8000,
-    "host": "0.0.0.0"
-  }
+  server: {
+    port: 8000,
+    host: "0.0.0.0",
+  },
 };

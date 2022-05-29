@@ -6,12 +6,14 @@ import App from "./sources/components/app";
 const rootElement = document.getElementById("root");
 const root = createRoot(rootElement);
 
-const Main = () => (
-  <StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-  </StrictMode>
-);
+function Main() {
+  return (
+    <StrictMode>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </StrictMode>
+  );
+}
 
 root.render(<Main />);
